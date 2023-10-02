@@ -1,6 +1,7 @@
 {
     "cph.general.saveLocation": "C:\\Users\\kaium uddin\\Desktop\\binfiles",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

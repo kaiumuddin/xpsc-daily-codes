@@ -3,21 +3,20 @@ using namespace std;
 
 int main()
 {
-    int n;
+    string n;
     cin >> n;
 
     int ans = 0;
-    while (n > 9)
+    while (n.size() > 1)
     {
         ans++;
 
-        int newN = 0;
-        while (n != 0)
+        int sum = 0;
+        for (auto c : n)
         {
-            newN += n % 10;
-            n = n / 10;
+            sum += c - '0';
         }
-        n = newN;
+        n = to_string(sum);
     }
 
     cout << ans << endl;

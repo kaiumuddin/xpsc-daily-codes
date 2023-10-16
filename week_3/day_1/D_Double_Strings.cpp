@@ -7,25 +7,26 @@ void solve()
     cin >> n;
 
     string a[n];
+    map<string, bool> mp;
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
-    }
-
-    set<string> s;
-
-    for (int j = 0; j < n; j++)
-    {
-        for (int k = 0; k < n; k++)
-        {
-            string add = a[j] + a[k];
-            s.insert(add);
-        }
+        mp[a[i]] = true;
     }
 
     for (int i = 0; i < n; i++)
     {
-        cout << s.count(a[i]);
+        bool ok = false;
+        for (int j = 1; j < a[i].length(); j++)
+        {
+            string pref = a[i].substr(0, j);
+            string suff = a[i].substr(j, a[i].length() - j);
+
+            if (mp[pref] && mp[suff])
+                ok = true;
+        }
+        cout << ok;
     }
 
     cout << endl;

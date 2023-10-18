@@ -1,0 +1,26 @@
+
+xor:
+x ^ 0 = x ; same
+x ^ 1 = !x ; flip
+
+trick 1 : 
+x ^ x = 0
+5 ^ 5 = 0
+
+trick 2 :
+even & 1 = 0
+odd  & 1 = 1
+
+trick 3 :
+xor : can help : bit difference
+A -> B : how  many bits have to change
+A ^ B = X ; numbers of set bit in X
+
+trick 4 :
+Count set bit
+
+
+trick 5 :
+remove last set bit
+n & (n-1)
+helps to find power of 2

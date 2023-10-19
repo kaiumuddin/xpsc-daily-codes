@@ -24,3 +24,9 @@ trick 5 :
 remove last set bit
 n & (n-1)
 helps to find power of 2
+
+
+trick 6 :
+if   A ^ B = C ; 5 ^ 7 = 2
+then A ^ C = B ; 5 ^ 2 = 7
+then B ^ C = A ; 7 ^ 2 = 5
